@@ -25,7 +25,14 @@ function add (number1, number2){
 }
 
 function addNumbers (){
-    return add(document.querySelector("#addend1"), document.querySelector("#addend2"));
+    let num1 = intParse(document.querySelector("#addend1").value);
+    let num2 = intParse(document.querySelector("#addend2").value);
+    let sum = document.querySelector("#sum");
+
+    sum = add(num1, num2)
+
+
+    return sum;
 }
 
 document.querySelector("#sum") = addNumbers()
