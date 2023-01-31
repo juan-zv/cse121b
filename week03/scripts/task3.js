@@ -25,54 +25,75 @@ function add (number1, number2){
 }
 
 function addNumbers (){
-    let num1 = intParse(document.querySelector("#addend1").value);
-    let num2 = intParse(document.querySelector("#addend2").value);
+    let num1 = parseInt(document.querySelector("#addend1").value);
+    let num2 = parseInt(document.querySelector("#addend2").value);
     let sum = document.querySelector("#sum");
 
-    sum = add(num1, num2)
+    sum.value = add(num1, num2);
 
 
     return sum;
 }
 
-document.querySelector("#sum") = addNumbers()
-document.querySelector("#addNumbers").addEventListener("click", addNumbers())
+document.querySelector("#addNumbers").addEventListener("click", addNumbers);
     
 
-function substract (number1, number2){
+function subtract (number1, number2){
     return number1 - number2;
 }
 
-function substractNumbers (){
-    return add(document.querySelector("#minuend"), document.querySelector("#substrahend"));
+function subtractNumbers (){
+    let num1 = parseInt(document.querySelector("#minuend").value);
+    let num2 = parseInt(document.querySelector("#subtrahend").value);
+    let difference = document.querySelector("#difference");
+
+    difference.value = subtract(num1, num2);
+
+
+    return difference;
 }
 
-document.querySelector("#difference") = substractNumbers()
-document.querySelector("#difference").addEventListener("click", substractNumbers())
+document.querySelector("#subtractNumbers").addEventListener("click", subtractNumbers);
 
 
-function add (number1, number2){
-    return number1 + number2;
+function multiply (number1, number2){
+    return number1 * number2;
 }
 
-function addNumbers (){
-    return add(document.getElementById("addend1"), document.getElementById("addend2"));
+function multiplyNumbers (){
+    let num1 = parseInt(document.querySelector("#factor1").value);
+    let num2 = parseInt(document.querySelector("#factor2").value);
+    let product = document.querySelector("#product");
+
+    product.value = multiply(num1, num2);
+
+
+    return product;
 }
 
-document.getElementById("sum") = addNumbers()
-document.getElementById("addNumbers").addEventListener("click", addNumbers())
+document.querySelector("#multiplyNumbers").addEventListener("click", multiplyNumbers);
 
 
-function add (number1, number2){
-    return number1 + number2;
+
+
+function division (number1, number2){
+    return number1 / number2;
 }
 
-function addNumbers (){
-    return add(document.getElementById("addend1"), document.getElementById("addend2"));
+function divideNumbers (){
+    let num1 = parseInt(document.querySelector("#dividend").value);
+    let num2 = parseInt(document.querySelector("#divisor").value);
+    let quotient = document.querySelector("#quotient");
+
+    quotient.value = division(num1, num2);
+
+
+    return quotient;
 }
 
-document.getElementById("sum") = addNumbers()
-document.getElementById("addNumbers").addEventListener("click", addNumbers())
+document.querySelector("#divideNumbers").addEventListener("click", divideNumbers);
+
+
 
 /* BUILT-IN METHODS */
 
