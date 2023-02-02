@@ -126,12 +126,33 @@ document.getElementById("array").innerHTML = numbers;
 
 // Step 3: Use the filter array method to find all of the odd numbers of the array variable and assign the reult to the HTML element with an ID of "odds" ( hint: % (modulus operartor) )
 
+const odds = numbers.filter(number => number % 2 != 0);
 
+document.getElementById("odds").innerHTML = odds;
 
 // Step 4: Use the filter array method to find all of the even numbers of the array variable and assign the result to the HTML element with an ID of "evens"
 
+const even = numbers.filter(number => number % 2 == 0);
+
+document.getElementById("evens").innerHTML = even;
+
 // Step 5: Use the reduce array method to sum the array variable elements and assign the result to the HTML element with an ID of "sumOfArray"
+
+const total = numbers.reduce((acumulator, currentValue) => acumulator + currentValue);
+
+document.getElementById("sumOfArray").innerHTML = total;
+
 
 // Step 6: Use the map array method to multiple each element in the array variable by 2 and assign the result to the HTML element with an ID of "multiplied"
 
+const bytwo = numbers.map(x => x * 2);
+
+document.getElementById("multiplied").innerHTML = bytwo;
+
 // Step 7: Use the map and reduce array methods to sum the array elements after multiplying each element by two.  Assign the result to the HTML element with an ID of "sumOfMultiplied"
+
+const multipliedByTwo = numbers.map(x => x * 2);
+
+const sumOfMultiplied = multipliedByTwo.reduce((acumulator, currentValue) => acumulator + currentValue);
+
+document.getElementById("sumOfMultiplied").innerHTML = sumOfMultiplied;
