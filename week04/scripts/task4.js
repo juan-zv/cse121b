@@ -13,15 +13,15 @@ myself.name = "Juan";
 
 // Step 3: Add another property named photo with a value of the image path and name (used in Task 2) as a string
 
-myself.photo = "images/juan.jpg";
+//myself.photo = "images/juan.jpg"; UNCOMMENTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
 // Step 4: Add another property named favoriteFoods with a value of an array of your favorite foods as strings ( hint: [] )
 
-myself.favoriteFoods = ["Pizza", "Burgers"];
+myself.favoriteFoods = ["Pizza", "Burgers", "Kebab", "Burritos"];
 
 // Step 5: Add another property named hobbies with a value of an array of your hobbies as strings
 
-myself.hobbies = ["Dance", "Sleep"];
+myself.hobbies = ["Dance", "Sleep", "Listen to Music"];
 
 // Step 6: Add another property named placesLived with a value of an empty array
 
@@ -29,14 +29,22 @@ myself.placesLived = [];
 
 // Step 7: Inside of the empty array above, add a new object with two properties: place and length and values of an empty string
 
-places = {"":""};
+myself.placesLived.places = {"":""};
 
 // Step 8: For each property, add appropriate values as strings
 
-places.Bolivia = "4 years";
-places.Spain = "14 years";
+myself.placesLived.places = {"Bolivia":"4 years"};
+
+console.log(myself.placesLived.places);
+
+
 
 // Step 9: Add additional objects with the same properties for each place you've lived
+
+myself.placesLived.places = {"":""};
+myself.placesLived.places = {"Spain": "14 years"};
+
+console.log(myself.placesLived.places);
 
 
 /* OUTPUT */
@@ -55,19 +63,42 @@ document.getElementById("photo").alt = myself.name;
 
 // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
 
-for (let i = 0; i < myself.favoriteFoods.length; i++) {
-    var li = document.createElement("li");
-    document.getElementById("favorite-foods").innerHTML = myself.favoriteFoods[i];
-}
-
 // Step 5: Append the <li> elements created above as children of the HTML <ul> element with an ID of favorite-foods
+
+for (let i = 0; i<myself.favoriteFoods.length; i++) {
+
+    let li = document.createElement("li");
+    li.innerHTML = (myself.favoriteFoods[i]);
+
+    let ul = document.getElementById("favorite-foods");
+
+    ul.appendChild(li);
+}
 
 // Step 6: Repeat Step 4 for each hobby in the hobbies property
 
 // Step 7: Repeat Step 5 using the HTML <ul> element with an ID of hobbies
 
+for (let i = 0; i<myself.hobbies.length; i++) {
+
+    let li = document.createElement("li");
+    li.innerHTML = (myself.hobbies[i]);
+
+    let ul = document.getElementById("hobbies");
+
+    ul.appendChild(li);
+}
+
 // Step 8: For each object in the <em>placesLived</em> property:
 // - Create an HTML <dt> element and put its place property in the <dt> element
 // - Create an HTML <dd> element and put its length property in the <dd> element
 
+document
+
+document.createElement("dt").innerHTML = 
+
+document.createElement("dd")
+
 // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
+
+//myself.placesLived.forEach(element => );
