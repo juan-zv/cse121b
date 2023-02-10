@@ -98,11 +98,11 @@ for (let i = 0; i<myself.hobbies.length; i++) {
 // - Create an HTML <dt> element and put its place property in the <dt> element
 // - Create an HTML <dd> element and put its length property in the <dd> element
 
-document
+// document
 
-document.createElement("dt").innerHTML = 
+// document.createElement("dt").innerHTML = 
 
-document.createElement("dd")
+// document.createElement("dd")
 
 // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
 
