@@ -13,7 +13,7 @@ myself.name = "Juan";
 
 // Step 3: Add another property named photo with a value of the image path and name (used in Task 2) as a string
 
-//myself.photo = "images/juan.jpg"; UNCOMMENTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+myself.photo = "images/juan.jpg";
 
 // Step 4: Add another property named favoriteFoods with a value of an array of your favorite foods as strings ( hint: [] )
 
@@ -29,22 +29,16 @@ myself.placesLived = [];
 
 // Step 7: Inside of the empty array above, add a new object with two properties: place and length and values of an empty string
 
-myself.placesLived.places = {"":""};
+myself.placesLived = [{"Place": "Length"}];
 
 // Step 8: For each property, add appropriate values as strings
 
-myself.placesLived.places = {"Bolivia":"4 years"};
-
-console.log(myself.placesLived.places);
-
-
+myself.placesLived.push({"Bolivia": "4 Years"});
 
 // Step 9: Add additional objects with the same properties for each place you've lived
 
-myself.placesLived.places = {"":""};
-myself.placesLived.places = {"Spain": "14 years"};
+myself.placesLived.push({"Spain": "14 Years"});
 
-console.log(myself.placesLived.places);
 
 
 /* OUTPUT */
@@ -55,7 +49,7 @@ document.getElementById("name").innerHTML = myself.name;
 
 // Step 2: Assign the value of the photo property as the src attribute of the HTML <img> element with an ID of photo
 
-//document.querySelector("#photo").src = myself.photo;
+document.querySelector("#photo").src = myself.photo;
 
 // Step 3: Assign the value of the name property as the alt attribute of the HTML <img> element with an ID of photo
 
@@ -71,12 +65,12 @@ for (let i = 0; i < myself.favoriteFoods.length; i++) {
 // Step 5: Append the <li> elements created above as children of the HTML <ul> element with an ID of favorite-foods
 
 for (let i = 0; i<myself.favoriteFoods.length; i++) {
-
+    
     let li = document.createElement("li");
     li.innerHTML = (myself.favoriteFoods[i]);
-
+    
     let ul = document.getElementById("favorite-foods");
-
+    
     ul.appendChild(li);
 }
 
@@ -85,12 +79,12 @@ for (let i = 0; i<myself.favoriteFoods.length; i++) {
 // Step 7: Repeat Step 5 using the HTML <ul> element with an ID of hobbies
 
 for (let i = 0; i<myself.hobbies.length; i++) {
-
+    
     let li = document.createElement("li");
     li.innerHTML = (myself.hobbies[i]);
-
+    
     let ul = document.getElementById("hobbies");
-
+    
     ul.appendChild(li);
 }
 
@@ -98,22 +92,17 @@ for (let i = 0; i<myself.hobbies.length; i++) {
 // - Create an HTML <dt> element and put its place property in the <dt> element
 // - Create an HTML <dd> element and put its length property in the <dd> element
 
-document
-
-document.createElement("dt").innerHTML = 
-
-document.createElement("dd")
-
 // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
 
 const placesList = document.getElementById("places-lived");
 for (let i=0; i<myself.placesLived.length; i++) {
-    const ddPlace = document.createElement("dd");
-    ddPlace.innerHTML = myself.placesLived[i].places;
+    const dtPlace = document.createElement("dt");
+    dtPlace.innerHTML = Object.keys(myself.placesLived[i]);
 
-    const dtLength = document.createElement("dt");
-    dtLength.innerHTML = myself.placesLived[i].length;
+    const ddLength = document.createElement("dd");
+    ddLength.innerHTML = Object.values(myself.placesLived[i]);
 
-    placesList.append(ddPlace);
-    placesList.append(dtLength);
+    placesList.append(dtPlace);
+    placesList.append(ddLength);
 }
+console.log(myself.placesLived);
