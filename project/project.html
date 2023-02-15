@@ -4,18 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Random Phrase Generator - Juan Zurita</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>
-
+        <nav>
+            <h3>Juan Zurita - Random Phrase Generator</h3>
+        </nav>
     </header>
     <main>
         <h1>Welcome to Random Sentence Generator!</h1>
-        
+        <button id="generate-phrase">Generate Random phrase!</button>
+        <div>
+            <h2 id="random-phrase">Random Phrase</h2>
+        </div>
+
+        <button id="generate-drawing">Generate Random drawing from phrase!</button>
+        <div>
+            <img id="image" src="images/randomimg.jpg" alt="drawing of phrase">
+        </div>
+        <h4>Note: This web app is conditioned by the API search results and the vocabulary in the 
+            storage. If the API could search for any image or even create one, there would be an image for
+            every phrase. In the same way, if the capability of the program could create any phrase, they would not
+            repeat themselves so often.
+        </h4>
     </main>
     <footer>
-
+        <div>
+            <h3>Juan Zurita - CSE 121B - 2023</h3>
+        </div>
     </footer>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

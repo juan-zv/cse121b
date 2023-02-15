@@ -1,0 +1,25 @@
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: aqua;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    align-items: center;
+}
+
+img {
+    max-width: 25%;
+    padding: 5em;
+}
+
+footer {
+    background-color: aqua;
+    text-align: center;
+}
